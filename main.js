@@ -600,6 +600,7 @@ const updateNextQuiz = (event) => {
     quizOptions.addEventListener("click", checkAnswer)
     if (questionIndex === selectedQuiz.length - 1) {
         resultBtn.classList.remove("hidden");
+        nextBtn.classList.add("hidden");
         return;
     }
     questionIndex++;
@@ -666,6 +667,7 @@ const replayQuiz = () => {
     resultContainer.classList.add("hidden");
     quizConfig.classList.remove("hidden");
     resultBtn.classList.add("hidden");
+    nextBtn.classList.remove("hidden");
 }
 
 const handleConfig = (event) => {
