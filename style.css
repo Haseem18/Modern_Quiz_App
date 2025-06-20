@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.hidden {
+    display: none;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5145BA;
+}
+
+.quiz_configuration_container {
+    text-align: center;
+    width: 90%;
+    max-width: 415px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+
+.quiz_configuration_container>*:not(:last-child) {
+    margin-bottom: 2.5rem;
+}
+
+.category .category_title {
+    margin-bottom: 2rem;
+}
+
+.category .category_options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.category_options label span,
+.question_numbers label span {
+    display: block;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #9B8FFF;
+    transition: all 0.3s ease;
+}
+
+.category_options label span:hover,
+.question_numbers label span:hover {
+    background-color: #dad5fd;
+}
+
+.category_options label input,
+.questions label input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.category label.check span,
+.question_numbers label.check span {
+    color: #dad5fd;
+    background-color: #5145BA;
+    border: 1px solid #dfdadf;
+}
+
+.questions h2 {
+    margin-bottom: 2rem;
+}
+
+.questions .question_numbers {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    padding: 0 1.5rem;
+}
+
+.question_numbers label {
+    flex: 1 1 10%;
+}
+
+.quiz_configuration_container .start_quiz,
+.result_container .try_again_btn {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    background-color: #5145BA;
+    padding: 1.3rem 2.5rem;
+    font-size: 1.6rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.quiz_configuration_container .start_quiz:hover {
+    background-color: #403795;
+}
+
+.quiz_container {
+    width: 90%;
+    max-width: 415px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+
+.quiz_container>* {
+    margin-bottom: 1.2rem;
+}
+
+.quiz_container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.09);
+    padding: 1.4rem 2.5rem;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.quiz_container .quiz {
+    padding: 0 2.5rem;
+}
+
+.quiz h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+}
+
+.quiz_options {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.quiz_options input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quiz_options span {
+    display: block;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.quiz_options label.correct span {
+    background-color: green;
+    color: white;
+}
+
+.quiz_options label.wrong span {
+    background-color: red;
+    color: white;
+}
+
+.quiz_container footer {
+    padding: 0 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz_container footer p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.quiz_container footer button {
+    background-color: #5145BA;
+    color: white;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+}
+
+.result_container {
+    width: 90%;
+    max-width: 415px;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.09);
+    padding: 1.4rem 2.5rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.result_container>* {
+    margin-bottom: 1.5rem;
+}
+
+.result_container h1 {
+    font-size: 2.5rem;
+}
+
+.result_container p {
+    font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 50%;
+    }
+}
